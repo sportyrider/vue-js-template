@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>First Vue App</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+
+  <body>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="">Home</a></li>
+
+        <li><a href="">Listing</a></li>
+      </ul>
+    </nav>
+
+    <div id="app">
+      <div>Here is {{ message }} : {{ items }}</div>
+
+      <div class="content">
+        <div class="content-info">
+          <h4>Component 1</h4>
+          <leftside :items="items" @remove-item="removeItem"></leftside>
+        </div>
+
+        <div class="content-info">
+          <h4>Component 2</h4>
+          <centerside></centerside>
+        </div>
+
+        <div class="content-info">
+          <h4>Component 3</h4>
+          <rightside :items="items" @add-item="addItem"></rightside>
+        </div>
+      </div>
+    </div>
+
+    <script src="main-vue-app.js"></script>
+  </body>
+</html>
